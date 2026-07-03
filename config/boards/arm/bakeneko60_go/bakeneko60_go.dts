@@ -42,7 +42,6 @@ RC(4,0)   RC(4,1)   RC(4,2)                      RC(4,5)                       R
 
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
-        wakeup-source;
         label = "KSCAN";
 
         diode-direction = "col2row";
@@ -113,8 +112,7 @@ RC(4,0)   RC(4,1)   RC(4,2)                      RC(4,5)                       R
     compatible = "nordic,nrf-spim";
 
     pinctrl-0 = <&spi3_default>;
-    pinctrl-1 = <&spi3_sleep>;
-    pinctrl-names = "default", "sleep";
+    pinctrl-names = "default";
     status = "okay";
 
     led_strip: ws2812@0 {
